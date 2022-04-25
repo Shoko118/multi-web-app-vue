@@ -52,27 +52,24 @@ function undoBt(index) {
 
 <template>
   <div class="px-7 py-8 sm:px-20 sm:py-10 bg-slate-300 w-full min-h-screen lg:w-[80%] mx-auto">
-    <h1 class="text-3xl xl:text-4xl 2xl:text-6xl font-bold">Todo App</h1>
+    <h1 class="text-3xl xl:text-4xl 2xl:text-4xl font-bold">Todo App</h1>
     <div class="flex flex-col pt-10">
       <div class="">
         <div class="flex">
           <!-- input of text -->
           <input
-            class="w-[80%] sm:w-[30%] px-2 xl:text-2xl xl:py-2 rounded-md"
+            class="w-[80%] sm:w-[30%] px-2 xl:text-xl xl:py-2 rounded-md"
             type="text"
             placeholder="press enter "
             v-model="newList"
             @keyup.enter.prevent="addButton"
           />
-          <button
-            class="ml-2 px-3 text-white rounded-md py-1 2xl:py-3 2xl:text-2xl bg-slate-700"
-            @click.prevent="addButton"
-          >
+          <button class="ml-2 px-3 text-white rounded-md py-1 2xl:text-xl bg-slate-700" @click.prevent="addButton">
             Add
           </button>
           <!-- input of number -->
           <input
-            class="ml-5 bg-slate-700 text-white px-2 py-1 2xl:text-2xl"
+            class="ml-5 bg-slate-700 text-white px-2 py-1 2xl:text-lg"
             type="number"
             placeholder="enter rating"
             v-model="newRating"
@@ -80,7 +77,7 @@ function undoBt(index) {
             max="5"
           />
           <!-- select options============== -->
-          <select name="Filter" v-model="filters" class="w-[9%] sm:w-[25%] 2xl:w-[30%] 2xl:text-2xl">
+          <select name="Filter" v-model="filters" class="w-[9%] sm:w-[25%] 2xl:w-[30%] 2xl:text-lg">
             <option value="All">All</option>
             <!-- <option value="Delete">Delete</option> -->
             <option value="Complete">Complete</option>
@@ -98,16 +95,16 @@ function undoBt(index) {
             :key="index"
           >
             <div class="flex items-center">
-              <span class="text-lg font-bold 2xl:text-4xl">Rating</span>
+              <span class="text-lg font-bold 2xl:text-2xl">Rating</span>
               :
-              <p class="text-md font-semibold ml-2 2xl:text-4xl">{{ todo.rating }}</p>
+              <p class="text-md font-semibold ml-2 2xl:text-2xl">{{ todo.rating }}</p>
             </div>
             <h1 :class="{ done: todo.completed }">
-              <p class="text-slate-600 text-base sm:text-lg font-bold 2xl:text-4xl">{{ todo.list }}</p>
+              <p class="text-slate-600 text-base sm:text-lg font-bold 2xl:text-2xl">{{ todo.list }}</p>
             </h1>
             <div class="flex items-center">
               <button
-                class="ml-2 sm:mr-2 p-1 sm:px-3 sm:py-2 bg-red-600 text-base rounded-md text-white 2xl:text-4xl"
+                class="ml-2 sm:mr-2 p-1 sm:px-3 sm:py-2 bg-red-600 text-base rounded-md text-white 2xl:text-2xl"
                 @click.prevent="removeTodos(index)"
               >
                 Delete
