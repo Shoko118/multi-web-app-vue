@@ -51,7 +51,7 @@ function undoBt(index) {
 </script>
 
 <template>
-  <div class="px-10 py-8 sm:px-20 sm:py-10 bg-slate-300 w-full min-h-screen lg:w-[80%] mx-auto">
+  <div class="px-7 py-8 sm:px-20 sm:py-10 bg-slate-300 w-full min-h-screen lg:w-[80%] mx-auto">
     <h1 class="text-3xl xl:text-4xl 2xl:text-6xl font-bold">Todo App</h1>
     <div class="flex flex-col pt-10">
       <div class="">
@@ -90,7 +90,7 @@ function undoBt(index) {
           <!-- <button v-if="deleteArray.length > 0" @click.prevent="undoDeletedTodos">Undo deleted todos</button> -->
         </div>
 
-        <div class="flex-col items-center pt-10 w=[25%] sm:w-[74%] space-y-5">
+        <div class="flex-col items-center pt-10 w-full sm:w-[74%] space-y-5">
           <!-- loop todos =========-->
           <div
             class="flex items-center justify-between border-slate-800 border-2 mt-5 px-4 py-7"
@@ -103,16 +103,16 @@ function undoBt(index) {
               <p class="text-md font-semibold ml-2 2xl:text-4xl">{{ todo.rating }}</p>
             </div>
             <h1 :class="{ done: todo.completed }">
-              <p class="text-slate-600 text-lg font-bold 2xl:text-4xl">{{ todo.list }}</p>
+              <p class="text-slate-600 text-base sm:text-lg font-bold 2xl:text-4xl">{{ todo.list }}</p>
             </h1>
             <div class="flex items-center">
               <button
-                class="mr-2 px-3 py-2 bg-red-600 rounded-md text-white 2xl:text-4xl"
+                class="ml-2 sm:mr-2 p-1 sm:px-3 sm:py-2 bg-red-600 text-base rounded-md text-white 2xl:text-4xl"
                 @click.prevent="removeTodos(index)"
               >
                 Delete
               </button>
-              <div class=""><input class="" type="checkbox" v-model="todo.completed" /></div>
+              <div class="ml-2 sm:ml-0"><input class="" type="checkbox" v-model="todo.completed" /></div>
             </div>
             <!-- <button
               class="px-3 py-1 bg-yellow-600 text-white rounded-md"
