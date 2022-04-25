@@ -23,7 +23,7 @@
       <div
         class="bg-slate-600 px-1 py-2 md:px-3 md:py-2 rounded-md hover:bg-slate-500 transform ease-in-out duration-150"
       >
-        <h1 class="font-bold text-xs md:text-xl">State management</h1>
+        <h1 class="font-bold text-xs md:text-xl">State Management</h1>
       </div>
     </div>
   </div>
