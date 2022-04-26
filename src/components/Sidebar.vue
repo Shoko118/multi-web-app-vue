@@ -7,7 +7,7 @@ import { AcademicCapIcon, ClipboardCheckIcon } from "@heroicons/vue/outline";
     <div class="">
       <div class="flex items-center pt-7 ml-4">
         <AcademicCapIcon class="w-10 h-10 2xl:w-15 2xl:h-15" />
-        <h1 class="text-2xl font-bold ml-3 2xl:text-3xl">Multi Web App</h1>
+        <h1 class="text-2xl font-bold ml-3 2xl:text-3xl">Multi Web Apps</h1>
       </div>
 
       <div class="flex items-center pt-5 ml-6 hover:text-slate-600 transform ease-in-out duration-150">
