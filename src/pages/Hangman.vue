@@ -46,6 +46,11 @@ function addLetters(letter) {
   else if (insideWord === false) tries.value = tries.value - 1;
   else emptyArray.value = emptyArray.value + letter;
 }
+
+function resetTries() {
+  tries.value = 5;
+  words.value = ["S", "O", "F", "T", "W", "A", "R", "E"];
+}
 </script>
 
 <template>
@@ -59,16 +64,24 @@ function addLetters(letter) {
         <span class="words font-bold inline" v-for="(word, index) in guessWords" :key="index">{{ word }}</span>
       </h2>
 
-      <h2 class="text-lg sm:text-2xl font-semibold sm:space-x-2 lg:space-x-2 xl:space-x-3">
-        Pick choices:
-        <span
-          class="letters text-lg sm:text-2xl font-bold cursor-pointer hover:text-blue-500"
-          v-for="(letter, index) in letters"
-          :key="index"
-          @click.prevent="addLetters(letter)"
-          >{{ letter }}</span
-        >
-      </h2>
+      <div class="">
+        <h2 class="text-lg sm:text-2xl font-semibold sm:space-x-2 lg:space-x-2 xl:space-x-3">
+          Pick choices:
+          <span
+            class="letters text-md sm:text-2xl font-normal sm:font-bold cursor-pointer hover:text-blue-500"
+            v-for="(letter, index) in letters"
+            :key="index"
+            @click.prevent="addLetters(letter)"
+            >{{ letter }}</span
+          >
+        </h2>
+      </div>
+      <button
+        class="mt-5 px-3 py-2 bg-green-600 hover:bg-green-500 transition duration-100 ease-in-out text-white font-semibold rounded-md"
+        @click="resetTries"
+      >
+        Reset Tries
+      </button>
     </div>
   </div>
 </template>
