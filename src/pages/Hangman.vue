@@ -77,7 +77,7 @@ function resetTries() {
         </h2>
       </div>
       <button
-        class="mt-5 px-3 py-2 bg-green-600 hover:bg-green-500 transition duration-100 ease-in-out text-white font-semibold rounded-md"
+        class="mt-4 px-3 py-2 bg-green-600 hover:bg-green-500 transition duration-100 ease-in-out text-white font-semibold rounded-md"
         @click="resetTries"
       >
         Reset Tries
