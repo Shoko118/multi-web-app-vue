@@ -11,6 +11,10 @@ const routes = [
     path: "/hangman",
     component: () => import("../pages/Hangman.vue"),
   },
+  {
+    path: "/tic-tac-toe",
+    component: () => import("../pages/TicTacToe.vue"),
+  },
 ];
 
 const router = createRouter({

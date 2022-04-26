@@ -12,6 +12,7 @@ const todos = ref([
   { rating: 2, list: "basketball", completed: false },
   { rating: 3, list: "badminton", completed: false },
 ]);
+
 // computed ============
 const filterTodos = computed(() => {
   if (filters.value === "All") return todos.value;
@@ -34,19 +35,7 @@ function addButton() {
   newList.value = "";
 }
 function removeTodos(index) {
-  deleteArray.value.push(todos.value[index]);
   todos.value.splice(index, 1);
-}
-function undoDeletedTodos() {
-  deleteArray.value.forEach((todo) => {
-    todos.value.push(todo);
-  });
-  deleteArray.value = [];
-}
-function undoBt(index) {
-  todos.value.push(deleteArray.value[index]);
-  deleteArray.value.splice(index, 1);
-  if (todos.value.length > 3) return alert("please enter a task", newList.value);
 }
 </script>
 
@@ -111,13 +100,6 @@ function undoBt(index) {
               </button>
               <div class="ml-2 sm:ml-0"><input class="" type="checkbox" v-model="todo.completed" /></div>
             </div>
-            <!-- <button
-              class="px-3 py-1 bg-yellow-600 text-white rounded-md"
-              v-if="todos.length > 3"
-              @dblclick.prevent="undoBt(index)"
-            >
-              Undo
-            </button> -->
           </div>
         </div>
       </div>
